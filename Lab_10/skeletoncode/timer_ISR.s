@@ -13,7 +13,7 @@ PRIV_TIMER_ISR:	PUSH	{R4,R5}
 				LDR		R0, =MPCORE_PRIV_TIMER	// base address of timer
 				MOV		R1, #1
 				STR		R1, [R0, #0xC]				// write 1 to F bit to reset it
-															// and clear the interrupt
+													// and clear the interrupt
 
 /* Move the two LEDS to the centre or away from the centre to the outside. */
 SWEEP:			LDR		R0, =LEDR_DIRECTION	// put shifting direction into R2
@@ -21,8 +21,8 @@ SWEEP:			LDR		R0, =LEDR_DIRECTION	// put shifting direction into R2
 				LDR		R1, =LEDR_PATTERN		// put LEDR pattern into R3
 				LDR		R3, [R1]
 
-				MOV R4,#1111100000
-				MOV R5,#0000011111
+				MOV R4,#0b1111100000
+				MOV R5,#0b0000011111
 				AND R4,R4,R3 //UPPER BIT
 				AND R5,R5,R3 //LOWER BIT
 
@@ -38,8 +38,10 @@ TOCENTRE:
 				B 	DONE_SWEEP
 				
 C_O:			MOV		R2, #1					// change direction to outside
-TOOUTSIDE:		
-				CMP R3,#513
+TOOUTSIDE:		PUSH {R2}
+				LDR R2,=513
+				CMP R3,R2
+                POP {R2}
 				BEQ O_C //IF AT OUTSIDE, SWITCH DIRECTION
 				LSL R4,R4,#1 //SHIFT BITS AWAY FROM CENTRE
 				LSR R5,R5,#1
