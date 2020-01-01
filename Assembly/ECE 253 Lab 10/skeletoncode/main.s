@@ -34,8 +34,7 @@ _start:
 			BL			CONFIG_KEYS				// configure the pushbutton KEYs
 			
 			//enable ARM processor interrupts
-			MOV R0,#0xffffffbf
-			AND CPSR,CPSR,R0
+			MSR CPSR,#0b00010011
 
 			LDR		R6, =0xFF200000 		// red LED base address
 MAIN:
@@ -44,20 +43,20 @@ MAIN:
 			B 			MAIN
 
 /* Configure the MPCore private timer to create interrupts every 0.25 seconds */
-CONFIG PRIV TIMER:
+CONFIG_PRIV_TIMER:
 			LDR		R0, =0xFFFEC600 		// Timer base address
-			MOV		R1, #50000000
+			LDR		R1,=50000000
 			STR 	R1,[R0]		//LOAD 50000000 FOR 0.25s
 			MOV 	R1, #111
-			STR 	R1,[R0],#8 //INTERRUPT, AUTOLOAD, ENABLE FOR TIMER
+			STR 	R1,[R0,#8] //INTERRUPT, AUTOLOAD, ENABLE FOR TIMER
 
 			MOV 		PC, LR 					// return
 
 /* Configure the KEYS to generate an interrupt */
-CONFIG KEYS:
+CONFIG_KEYS:
 			LDR 		R0, =0xFF200050 		// KEYs base address
 			MOV 		R1, #0b1000
-			STR 		R1,[R0],#8 //ENABLE INTERRUPTS FOR KEY3
+			STR 		R1,[R0,#8] //ENABLE INTERRUPTS FOR KEY3
 			MOV 		PC, LR 					// return
 
 			.global	LEDR_DIRECTION

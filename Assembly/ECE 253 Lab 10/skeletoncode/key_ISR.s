@@ -1,3 +1,4 @@
+.include "address_map_arm.s"
 /***************************************************************************************
  * Pushbutton - Interrupt Service Routine                                
  *                                                                          
@@ -11,14 +12,14 @@ KEY_ISR: 		LDR		R0, =KEY_BASE			// base address of KEYs parallel port
 CHK_KEY3:		MOV R3,#0b1000
 				AND R3,R3,R1
 				CMP R3,#0b1000
+                
 UNEXPECTED_KEY:	BNE UNEXPECTED_KEY
 
 START_STOP:		LDR		R0, =MPCORE_PRIV_TIMER		// timer base address
 				LDR		R1, [R0, #0x8]			// read timer control register
 				MOV 	R3,#1
 				EOR 	R1,R1,R3
-				STR 	R1, [R0] //TOGGLE TIMER ENABLE
+				STR 	R1, [R0, #0x8] //TOGGLE TIMER ENABLE
 
 END_KEY_ISR:	MOV	PC, LR
 					.end
-	

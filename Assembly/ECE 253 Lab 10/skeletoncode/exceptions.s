@@ -1,4 +1,3 @@
-NOTE TO STUDENTS: THIS FILE IS COMPLETE EXCEPT FOR THE TWO LINES THAT SAY FILL IN CODE HERE
 
 				.include	"address_map_arm.s"
 				.include "defines.s"
