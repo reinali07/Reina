@@ -1,0 +1,10 @@
+module county_thing(input clock50MHz, output reg clock2Hz);
+	reg [24:0]counter;
+	always@(posedge clock50MHz)
+		if (counter==25'h17D7840)
+			counter <= 25'b0;
+			clock2Hz <= 1'b1;
+		else
+			counter <= counter + 1;
+			clock2Hz <= 1'b0;
+endmodule

@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/DESL/Quartus18/lab5p3/simulation/qsim
+vpart3
+Z1 !s110 1571195203
+!i10b 1
+!s100 I92:MaEFW3?ED]10LI`[o0
+I^`iiIhZ`95zjTbG`2:PJl1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1571195202
+8part3.vo
+Fpart3.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1571195203.000000
+!s107 part3.vo|
+!s90 -work|work|part3.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vpart3_vlg_vec_tst
+R1
+!i10b 1
+!s100 [_?PPEN[QL7oz5@52PmYA3
+IBi<djca1<@m5OK_;CW[o;3
+R2
+R0
+w1571195200
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6

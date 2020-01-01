@@ -1,0 +1,84 @@
+|part5
+CLOCK_50 => CLOCK_50.IN1
+HEX0[0] <= hexDisp:H1.port1
+HEX0[1] <= hexDisp:H1.port1
+HEX0[2] <= hexDisp:H1.port1
+HEX0[3] <= hexDisp:H1.port1
+HEX0[4] <= hexDisp:H1.port1
+HEX0[5] <= hexDisp:H1.port1
+HEX0[6] <= hexDisp:H1.port1
+
+
+|part5|s_econds:S1
+clk => c_ounter[0]~reg0.CLK
+clk => c_ounter[1]~reg0.CLK
+clk => c_ounter[2]~reg0.CLK
+clk => c_ounter[3]~reg0.CLK
+clk => c_ounter[4]~reg0.CLK
+clk => c_ounter[5]~reg0.CLK
+clk => c_ounter[6]~reg0.CLK
+clk => c_ounter[7]~reg0.CLK
+clk => c_ounter[8]~reg0.CLK
+clk => c_ounter[9]~reg0.CLK
+clk => c_ounter[10]~reg0.CLK
+clk => c_ounter[11]~reg0.CLK
+clk => c_ounter[12]~reg0.CLK
+clk => c_ounter[13]~reg0.CLK
+clk => c_ounter[14]~reg0.CLK
+clk => c_ounter[15]~reg0.CLK
+clk => c_ounter[16]~reg0.CLK
+clk => c_ounter[17]~reg0.CLK
+clk => c_ounter[18]~reg0.CLK
+clk => c_ounter[19]~reg0.CLK
+clk => c_ounter[20]~reg0.CLK
+clk => c_ounter[21]~reg0.CLK
+clk => c_ounter[22]~reg0.CLK
+clk => c_ounter[23]~reg0.CLK
+clk => c_ounter[24]~reg0.CLK
+clk => c_ounter[25]~reg0.CLK
+clk => c_ounter[26]~reg0.CLK
+clk => c_ounter[27]~reg0.CLK
+c_ounter[0] <= c_ounter[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[1] <= c_ounter[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[2] <= c_ounter[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[3] <= c_ounter[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[4] <= c_ounter[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[5] <= c_ounter[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[6] <= c_ounter[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[7] <= c_ounter[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[8] <= c_ounter[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[9] <= c_ounter[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[10] <= c_ounter[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[11] <= c_ounter[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[12] <= c_ounter[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[13] <= c_ounter[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[14] <= c_ounter[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[15] <= c_ounter[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[16] <= c_ounter[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[17] <= c_ounter[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[18] <= c_ounter[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[19] <= c_ounter[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[20] <= c_ounter[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[21] <= c_ounter[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[22] <= c_ounter[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[23] <= c_ounter[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[24] <= c_ounter[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[25] <= c_ounter[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[26] <= c_ounter[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_ounter[27] <= c_ounter[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|hexDisp:H1
+S[0] => Decoder0.IN3
+S[1] => Decoder0.IN2
+S[2] => Decoder0.IN1
+S[3] => Decoder0.IN0
+H[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+H[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+H[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+H[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+H[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+H[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+H[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

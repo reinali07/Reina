@@ -1,0 +1,31 @@
+module TFF(input T, clk, Resetn, output reg Q);
+	wire D = T^Q;
+	always @(negedge Resetn, posedge clk)
+	begin
+		if (!Resetn)
+			Q <= 1'b0;
+		else
+			Q <= D;
+	end
+endmodule
+
+module part3(input enable, clk, Resetn, output [15:0]Q);
+	
+	TFF T1(enable, clk, Resetn, Q[0]);
+	TFF T2(enable&Q[0], clk, Resetn, Q[1]);
+	TFF T3(enable&Q[1], clk, Resetn, Q[2]);
+	TFF T4(enable&Q[2], clk, Resetn, Q[3]);
+	TFF T5(enable&Q[3], clk, Resetn, Q[4]);
+	TFF T6(enable&Q[4], clk, Resetn, Q[5]);
+	TFF T7(enable&Q[5], clk, Resetn, Q[6]);
+	TFF T8(enable&Q[6], clk, Resetn, Q[7]);
+	TFF T9(enable&Q[7], clk, Resetn, Q[8]);
+	TFF T10(enable&Q[8], clk, Resetn, Q[9]);
+	TFF T11(enable&Q[9], clk, Resetn, Q[10]);
+	TFF T12(enable&Q[10], clk, Resetn, Q[11]);
+	TFF T13(enable&Q[11], clk, Resetn, Q[12]);
+	TFF T14(enable&Q[12], clk, Resetn, Q[13]);
+	TFF T15(enable&Q[13], clk, Resetn, Q[14]);
+	TFF T16(enable&Q[14], clk, Resetn, Q[15]);
+	
+endmodule

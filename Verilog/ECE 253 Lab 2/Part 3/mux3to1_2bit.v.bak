@@ -1,0 +1,21 @@
+module mux2to1_2bit(s,X,Y,out);
+	input [1:0]X,Y;
+	input s;
+	output [1:0]out;
+	assign out = ({~s,~s}&X)|({s,s}&Y);
+endmodule
+
+module mux3to1_2bit(SW,LEDR);
+	input [9:0]SW;
+	output [1:0]LEDR;
+	
+	wire [1:0]U,V,W,S,M;
+	
+	assign S = SW[9:8];
+	assign U = SW[5:4];
+	assign V = SW[3:2];
+	assign W = SW[1:0];
+	
+	mux2to1_2bit U1(S[0],U,V,M);
+	mux2to1_2bit U2(S[1],M,W,LEDR);
+endmodule

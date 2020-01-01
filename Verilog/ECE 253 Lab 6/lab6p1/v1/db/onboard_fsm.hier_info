@@ -1,0 +1,85 @@
+|onboard_fsm
+SW[0] => resetn.IN9
+SW[1] => comb.IN1
+SW[1] => comb.IN1
+SW[1] => comb.IN1
+SW[1] => comb.IN1
+SW[1] => comb.IN1
+SW[1] => comb.IN1
+SW[1] => comb.IN1
+SW[1] => comb.IN1
+KEY[0] => clock.IN9
+LEDR[0] << flippity_flop_zero:F0.port2
+LEDR[1] << flippity_flop:F1.port3
+LEDR[2] << flippity_flop:F2.port3
+LEDR[3] << flippity_flop:F3.port3
+LEDR[4] << flippity_flop:F4.port3
+LEDR[5] << flippity_flop:F5.port3
+LEDR[6] << flippity_flop:F6.port3
+LEDR[7] << flippity_flop:F7.port3
+LEDR[8] << flippity_flop:F9.port3
+LEDR[9] << z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|onboard_fsm|flippity_flop_zero:F0
+clock => Q~reg0.CLK
+resetn => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|onboard_fsm|flippity_flop:F1
+d => Q.DATAB
+clock => Q~reg0.CLK
+resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|onboard_fsm|flippity_flop:F2
+d => Q.DATAB
+clock => Q~reg0.CLK
+resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|onboard_fsm|flippity_flop:F3
+d => Q.DATAB
+clock => Q~reg0.CLK
+resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|onboard_fsm|flippity_flop:F4
+d => Q.DATAB
+clock => Q~reg0.CLK
+resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|onboard_fsm|flippity_flop:F5
+d => Q.DATAB
+clock => Q~reg0.CLK
+resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|onboard_fsm|flippity_flop:F6
+d => Q.DATAB
+clock => Q~reg0.CLK
+resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|onboard_fsm|flippity_flop:F7
+d => Q.DATAB
+clock => Q~reg0.CLK
+resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|onboard_fsm|flippity_flop:F9
+d => Q.DATAB
+clock => Q~reg0.CLK
+resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

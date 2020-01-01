@@ -1,0 +1,7 @@
+module flippity_flop(input d,clock,resetn,output reg q);
+	always@(posedge clock)
+		if (!resetn)
+			q <= 0;
+		else
+			q <= d;
+endmodule

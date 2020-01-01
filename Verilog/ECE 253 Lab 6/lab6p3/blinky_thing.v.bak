@@ -1,0 +1,17 @@
+module blinky_thing(input [2:0]SW,input [1:0] KEY,input CLOCK_50, output LEDR[0]);
+
+	wire start = KEY[1]; //clicking: posedge start
+	wire resetn = KEY[0]; //clicking: posedge reset
+
+	wire [2:0]letter = SW[2:0]; //which letter
+	wire [9:0]sequence;
+	beepy_thing B1(letter,start,resetn,sequence); //flashy sequence
+
+	wire clock2;
+	county_thing H1(CLOCK_50,clock2); //make slower clock
+
+	wire [9:0]light;
+	shifty_thing S1(sequence,start,clock2,resetn,light); //shift bits of sequence w/ time
+	
+	assign LEDR[0] = light[9]; //display the 9th bit (since shifting left)
+endmodule

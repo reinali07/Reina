@@ -1,0 +1,19 @@
+module shifty_thing(input [9:0]load,input ln, clock,resetn,output reg [9:0]Q);
+	always@(posedge resetn,posedge ln,posedge clock)
+		if (resetn) //turn it off
+			Q<=10'b0;
+		else if (ln) //load w/ bit sequence
+			Q<=load;
+		else begin //shift all bits over every half second
+			Q[9]<=Q[8];
+			Q[8]<=Q[7];
+			Q[7]<=Q[6];
+			Q[6]<=Q[5];
+			Q[5]<=Q[4];
+			Q[4]<=Q[3];
+			Q[3]<=Q[2];
+			Q[2]<=Q[1];
+			Q[1]<=Q[0];
+			Q[0]<=0;
+	end
+endmodule

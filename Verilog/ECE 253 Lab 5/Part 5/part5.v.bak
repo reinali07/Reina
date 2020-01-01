@@ -1,0 +1,18 @@
+module part5(input CLOCK_50,output [6:0]HEX0);
+	reg [15:0] q;
+	wire [4:0] countsecs;
+	
+	seconds S1(CLOCK_50,countsecs);
+	
+	always@(countsecs)
+		if (countsecs==4'h30d4)
+		
+	
+	
+module seconds(input clock,output reg [4:0]counter);
+	always@(posedge clock)
+		if (counter == 4'h30d4)
+			counter <= 4'h0000;
+		else
+			counter <= counter + 1;
+endmodule

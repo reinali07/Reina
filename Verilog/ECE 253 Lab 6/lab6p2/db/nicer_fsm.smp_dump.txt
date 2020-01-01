@@ -1,0 +1,12 @@
+
+State Machine - |nicer_fsm|now
+Name now.H now.G now.F now.E now.D now.C now.B now.A now.I 
+now.A 0 0 0 0 0 0 0 0 0 
+now.B 0 0 0 0 0 0 1 1 0 
+now.C 0 0 0 0 0 1 0 1 0 
+now.D 0 0 0 0 1 0 0 1 0 
+now.E 0 0 0 1 0 0 0 1 0 
+now.F 0 0 1 0 0 0 0 1 0 
+now.G 0 1 0 0 0 0 0 1 0 
+now.H 1 0 0 0 0 0 0 1 0 
+now.I 0 0 0 0 0 0 0 1 1 

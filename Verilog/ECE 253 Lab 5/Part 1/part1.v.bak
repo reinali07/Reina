@@ -1,0 +1,22 @@
+module dLatch(input D,clock,output reg Q);
+	always@(D,clock)
+	if (clock == 1)
+		Q = D;
+endmodule
+
+module posDFF(input D,clock,output reg Q);
+	always@(posedge clock)
+	Q <= D;
+endmodule
+
+module negDFF(input D,clock,output reg Q);
+	always@(negedge clock)
+	Q <= D;
+endmodule
+
+module part1(input D,clock,output[3:0]Q);
+	dLatch U1(D,clock,Q[0]);
+	posDFF U2(D,clock,Q[1]);
+	nedDFF U3(D,clock,Q[2]);
+endmodule
+

@@ -1,0 +1,345 @@
+$comment
+	File created using the following command:
+		vcd file part3.msim.vcd -direction
+$end
+$date
+	Tue Oct 15 23:06:43 2019
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module part3_vlg_vec_tst $end
+$var reg 1 ! Resetn $end
+$var reg 1 " clk $end
+$var reg 1 # enable $end
+$var wire 1 $ Q [15] $end
+$var wire 1 % Q [14] $end
+$var wire 1 & Q [13] $end
+$var wire 1 ' Q [12] $end
+$var wire 1 ( Q [11] $end
+$var wire 1 ) Q [10] $end
+$var wire 1 * Q [9] $end
+$var wire 1 + Q [8] $end
+$var wire 1 , Q [7] $end
+$var wire 1 - Q [6] $end
+$var wire 1 . Q [5] $end
+$var wire 1 / Q [4] $end
+$var wire 1 0 Q [3] $end
+$var wire 1 1 Q [2] $end
+$var wire 1 2 Q [1] $end
+$var wire 1 3 Q [0] $end
+
+$scope module i1 $end
+$var wire 1 4 gnd $end
+$var wire 1 5 vcc $end
+$var wire 1 6 unknown $end
+$var tri1 1 7 devclrn $end
+$var tri1 1 8 devpor $end
+$var tri1 1 9 devoe $end
+$var wire 1 : ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 ; clk~input_o $end
+$var wire 1 < clk~inputCLKENA0_outclk $end
+$var wire 1 = enable~input_o $end
+$var wire 1 > T1|Q~0_combout $end
+$var wire 1 ? Resetn~input_o $end
+$var wire 1 @ T1|Q~q $end
+$var wire 1 A T2|Q~0_combout $end
+$var wire 1 B T2|Q~q $end
+$var wire 1 C T3|Q~0_combout $end
+$var wire 1 D T3|Q~q $end
+$var wire 1 E T4|Q~0_combout $end
+$var wire 1 F T4|Q~q $end
+$var wire 1 G T5|Q~0_combout $end
+$var wire 1 H T5|Q~q $end
+$var wire 1 I comb~0_combout $end
+$var wire 1 J T6|Q~0_combout $end
+$var wire 1 K T6|Q~q $end
+$var wire 1 L T7|Q~0_combout $end
+$var wire 1 M T7|Q~q $end
+$var wire 1 N T8|Q~0_combout $end
+$var wire 1 O T8|Q~q $end
+$var wire 1 P T9|Q~0_combout $end
+$var wire 1 Q T9|Q~q $end
+$var wire 1 R T10|Q~0_combout $end
+$var wire 1 S T10|Q~q $end
+$var wire 1 T T11|Q~1_combout $end
+$var wire 1 U T11|Q~0_combout $end
+$var wire 1 V T11|Q~q $end
+$var wire 1 W T12|Q~1_combout $end
+$var wire 1 X T12|Q~0_combout $end
+$var wire 1 Y T12|Q~q $end
+$var wire 1 Z T13|Q~1_combout $end
+$var wire 1 [ T13|Q~0_combout $end
+$var wire 1 \ T13|Q~q $end
+$var wire 1 ] T14|Q~1_combout $end
+$var wire 1 ^ T14|Q~0_combout $end
+$var wire 1 _ T14|Q~q $end
+$var wire 1 ` T15|Q~1_combout $end
+$var wire 1 a T15|Q~0_combout $end
+$var wire 1 b T15|Q~q $end
+$var wire 1 c T16|Q~1_combout $end
+$var wire 1 d comb~1_combout $end
+$var wire 1 e T16|Q~0_combout $end
+$var wire 1 f T16|Q~q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+1#
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+04
+15
+x6
+17
+18
+19
+0:
+0;
+0<
+1=
+1>
+1?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+$end
+#20000
+1"
+1;
+1<
+1@
+13
+1A
+0>
+#50000
+0"
+0;
+0<
+#80000
+1"
+1;
+1<
+1B
+0@
+03
+12
+1>
+#110000
+0"
+0;
+0<
+#140000
+1"
+1;
+1<
+1@
+13
+0A
+1C
+0>
+#170000
+0"
+0;
+0<
+#200000
+1"
+1;
+1<
+1D
+0B
+0@
+03
+02
+11
+1>
+#230000
+0"
+0;
+0<
+#260000
+1"
+1;
+1<
+1@
+13
+1A
+0>
+#290000
+0"
+0;
+0<
+#320000
+1"
+1;
+1<
+1B
+0@
+03
+12
+1>
+#340000
+0!
+0?
+0B
+0D
+01
+02
+0A
+0C
+#350000
+0"
+0;
+0<
+#380000
+1"
+1;
+1<
+#400000
+1!
+1?
+#410000
+0"
+0;
+0<
+#440000
+1"
+1;
+1<
+1@
+13
+1A
+0>
+#470000
+0"
+0;
+0<
+#500000
+1"
+1;
+1<
+1B
+0@
+03
+12
+1>
+#510000
+0#
+0=
+0>
+#530000
+0"
+0;
+0<
+#560000
+1"
+1;
+1<
+#590000
+0"
+0;
+0<
+#620000
+1"
+1;
+1<
+#630000
+0!
+0?
+0B
+02
+0A
+#650000
+0"
+0;
+0<
+#680000
+1"
+1;
+1<
+#710000
+0"
+0;
+0<
+#740000
+1"
+1;
+1<
+#770000
+0"
+0;
+0<
+#800000
+1"
+1;
+1<
+#830000
+0"
+0;
+0<
+#860000
+1"
+1;
+1<
+#890000
+0"
+0;
+0<
+#1000000
