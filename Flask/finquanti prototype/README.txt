@@ -1,4 +1,4 @@
-website is fully functional offline atm
+website is functional offline atm
 
 in order to run:
 1. extract files
