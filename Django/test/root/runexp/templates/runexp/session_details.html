@@ -1,0 +1,15 @@
+<h1>Session: {{ session.filename }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'runexp:delete_experiment' session.filename %}" method="post"> <!--method="post" alters serverside data-->
+{% csrf_token %} <!--use w/ post forms-->
+{% for experiment in session.experiment_set.all %} <!-- for every experiment object under the session -->
+    <input type="checkbox" name="experiment" id="experiment{{ forloop.counter }}" value="{{ experiment.eid }}"> <!--name = experiment, id = experiment1,2,... value=id-->
+    <label for="experiment{{ forloop.counter }}"><a href="{% url 'runexp:experiment_edit' session.filename experiment.eid %}">Concentration: {{ experiment.concentration }}; Result: {{ experiment.result }}</a></label><br> 
+{% endfor %}
+<input type="submit" onclick="return confirm('Are you sure?');" value="Delete Experiments">
+</form>
+<a href="{% url 'runexp:session' session.filename %}">Resume session</a>
+<a href="{% url 'runexp:index' %}">View all sessions</a>
+<a href="{% url 'runexp:session_create' %}">Start new session</a>

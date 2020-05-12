@@ -1,0 +1,12 @@
+<h1>Experiment: {{ experiment.date }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="save" value="Update">
+</form>
+<form action="{% url 'runexp:session_details' experiment.session.filename %}" method="get">
+    <input type="submit" value="Cancel">
+</form>

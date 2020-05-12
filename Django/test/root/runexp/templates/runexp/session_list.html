@@ -1,0 +1,15 @@
+<h1>Sessions</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="" method="post"> <!--method="post" alters serverside data-->
+{% csrf_token %} <!--use w/ post forms-->
+{% for session in session_list %} <!-- for every choice object under the question -->
+    <input type="checkbox" name="session" id="session{{ forloop.counter }}" value="{{ session.filename }}"> <!--name = choice, id = choice 1,2,... value=id-->
+    <label for="choice{{ forloop.counter }}"><a href="{% url 'runexp:session_details' session.filename  %}">{{ session.filename }}</a></label><br> 
+{% endfor %}
+<input type="submit" name="delete" formaction="{% url 'runexp:delete_sessions' %}" onclick="return confirm('Are you sure?');" value="Delete Sessions">
+<input type="submit" name="download" formaction="{% url 'runexp:download_sessions' %}" value="Download Sessions">
+</form>
+
+<a href="{% url 'runexp:session_create' %}">Start new session</a>

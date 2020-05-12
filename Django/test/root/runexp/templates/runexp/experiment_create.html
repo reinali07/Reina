@@ -1,0 +1,25 @@
+<h1>Session: {{ view.kwargs.filename }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save Experiment" />
+</form>
+
+<form action="{% url 'runexp:run_experiment' view.kwargs.filename %}" method="get">
+    <input type="submit" name="run" value="Run Experiment">
+</form>
+
+<p>Time: {{ time }}s</p>
+
+<form action="" method="post">
+    {% csrf_token %} 
+    <input type="submit" name="delete" formaction="{% url 'runexp:delete_current_session' view.kwargs.filename %}" onclick="return confirm('Are you sure?');" value="Delete This Session">
+    <input type="submit" name="download" formaction="{% url 'runexp:download_current_session' view.kwargs.filename %}" value="Download This Session">
+</form>
+
+
+<a href="{% url 'runexp:index' %}">View all sessions</a>
+<a href="{% url 'runexp:session_create' %}">Start new session</a>

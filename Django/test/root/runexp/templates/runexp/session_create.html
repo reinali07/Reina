@@ -1,0 +1,12 @@
+<h1>Create new session</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<p>Default filename: dmy_hms</p>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Start Session" />
+</form>  
+
+<a href="{% url 'runexp:index' %}">View all sessions</a>
